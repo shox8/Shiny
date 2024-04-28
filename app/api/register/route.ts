@@ -28,7 +28,10 @@ export async function POST(request: Request) {
   }
 
   if (await emailInUse(email)) {
-    return NextResponse.json({ message: "This email already in use!" });
+    return NextResponse.json(
+      { message: "This email already in use!" },
+      { status: 400 }
+    );
   }
 
   const salt = await bcrypt.genSalt(10);
