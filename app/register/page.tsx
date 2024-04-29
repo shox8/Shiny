@@ -4,6 +4,7 @@ import { User } from "@/app/types";
 import { useRegisterMutation } from "@/redux/services/auth";
 import CustomInput from "@/components/Input";
 import { useRouter } from "next/navigation";
+import styles from "../../styles/auth.module.scss";
 
 export default function Register() {
   const [user, setUser] = useState<User | any>();
@@ -13,12 +14,13 @@ export default function Register() {
   async function submit(event: React.FormEvent) {
     event.preventDefault();
     await registerUser(user).unwrap();
-    route.push("/")
+    route.push("/");
   }
 
   return (
-    <div>
+    <div className={styles.register}>
       <form onSubmit={submit}>
+        <h1>Register</h1>
         <CustomInput label="Name" name="name" set={setUser} required />
         <CustomInput
           type="email"

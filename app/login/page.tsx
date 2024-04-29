@@ -4,6 +4,7 @@ import { User } from "@/app/types";
 import { useLoginMutation } from "@/redux/services/auth";
 import CustomInput from "@/components/Input";
 import { useRouter } from "next/navigation";
+import styles from "../../styles/auth.module.scss";
 
 export default function Login() {
   const [user, setUser] = useState<User | any>();
@@ -17,8 +18,9 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <div className={styles.register}>
       <form onSubmit={submit}>
+        <h1>Login</h1>
         <CustomInput
           type="email"
           label="Email"

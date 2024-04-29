@@ -19,7 +19,7 @@ export default function CustomInput({
   set,
 }: Props) {
   return (
-    <div>
+    <div className="flex flex-col gap-[2px] mt-1">
       {label ? <label htmlFor={name}>{label}</label> : ""}
       <input
         type={type}
