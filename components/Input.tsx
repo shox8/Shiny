@@ -6,6 +6,7 @@ interface Props {
   ph?: string;
   label?: string;
   name?: string;
+  required?: boolean;
   set: Dispatch<SetStateAction<User | undefined>>;
 }
 
@@ -14,6 +15,7 @@ export default function CustomInput({
   ph,
   label,
   name,
+  required = true,
   set,
 }: Props) {
   return (
@@ -24,6 +26,7 @@ export default function CustomInput({
         name={name}
         placeholder={ph}
         id={name}
+        required={required}
         onChange={(e) =>
           set((prevent) => ({ ...prevent, [e.target.name]: e.target.value }))
         }
