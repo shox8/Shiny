@@ -28,8 +28,14 @@ export default function Login() {
           set={setUser}
           required
         />
-        <CustomInput label="Password" name="password" set={setUser} required />
-        <button>Submit</button>
+        <CustomInput
+          label="Password"
+          name="password"
+          set={setUser}
+          required
+          eye={true}
+        />
+        <button className={styles.submitBtn}>Submit</button>
       </form>
     </div>
   );

@@ -29,8 +29,14 @@ export default function Register() {
           set={setUser}
           required
         />
-        <CustomInput label="Password" name="password" set={setUser} required />
-        <button>Submit</button>
+        <CustomInput
+          label="Password"
+          name="password"
+          set={setUser}
+          eye={true}
+          required
+        />
+        <button className={styles.submitBtn}>Submit</button>
       </form>
     </div>
   );
