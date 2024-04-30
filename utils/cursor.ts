@@ -1,5 +1,5 @@
 export const cursor = (effect: any) => {
-  window.addEventListener("mousemove", (e: MouseEvent) => {
+  document.addEventListener("mousemove", (e: MouseEvent) => {
     const { x, y } = e;
     const w = x < innerWidth / 2 ? x : innerWidth - x;
     const h = y < innerHeight / 2 ? y : innerHeight - y;

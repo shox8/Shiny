@@ -1,5 +1,5 @@
 .register {
-    height: 100dvh;
+    min-height: 100dvh;
     background-color: #0b090a;
     display: flex;
     justify-content: center;
@@ -64,6 +64,27 @@
             background-color: #4d4a52;
             padding-left: 10px;
             height: 40px;
+        }
+
+        kbd {
+            margin-top: 10px;
+            text-align: center;
+
+            a {
+                color: #3a7dd4;
+            }
+        }
+    }
+}
+
+@media screen and (max-width :700px) {
+    .register {
+        align-items: end;
+
+        form {
+            min-width: 300px;
+            // margin-bottom: 10px;
+            // background-color: transparent;
         }
     }
 }

@@ -42,9 +42,9 @@ export default function Register() {
           eye={true}
           required
         />
-        <span>
-          Have you got an accaunt? <Link href={"/login"}>Login</Link>
-        </span>
+        <kbd>
+          Are you member? <Link href={"/login"}>Login</Link>
+        </kbd>
         <button className={styles.submitBtn}>Submit</button>
       </form>
     </div>

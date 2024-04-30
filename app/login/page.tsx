@@ -6,6 +6,7 @@ import CustomInput from "@/components/Input";
 import { useRouter } from "next/navigation";
 import styles from "../../styles/auth.module.scss";
 import { cursor } from "@/utils/cursor";
+import Link from "next/link";
 
 export default function Login() {
   const [user, setUser] = useState<User | any>();
@@ -40,6 +41,9 @@ export default function Login() {
           required
           eye={true}
         />
+        <kbd>
+          Create an accaunt. <Link href={"/register"}>Register</Link>
+        </kbd>
         <button className={styles.submitBtn}>Submit</button>
       </form>
     </div>
