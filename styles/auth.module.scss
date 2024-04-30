@@ -1,9 +1,24 @@
 .register {
     height: 100dvh;
-    background-color: #0c0011;
+    background-color: #22223b;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+
+    .effect {
+        max-height: 300px;
+        max-width: 300px;
+        border-radius: 50%;
+        background: linear-gradient(#f2e9e4ab, #ffa69ebe);
+        animation: effect 1s infinite linear;
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        filter: blur(80px);
+        transform: translate(-50%, -50%);
+        transition: .1s;
+    }
 
     form {
         width: 350px;
@@ -11,9 +26,10 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        background-color: #3d344d;
+        background-color: #16151881;
         border-radius: 20px;
         padding: 20px;
+        z-index: 1;
 
         button,
         input {
@@ -39,7 +55,7 @@
         }
 
         input {
-            background-color: #2f2a38;
+            background-color: #4d4a52;
             padding-left: 10px;
             height: 40px;
         }

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { User } from "@/app/types";
 import { useLoginMutation } from "@/redux/services/auth";
 import CustomInput from "@/components/Input";
@@ -10,6 +10,7 @@ export default function Login() {
   const [user, setUser] = useState<User | any>();
   const [loginUser] = useLoginMutation();
   const route = useRouter();
+  const effect = useRef<HTMLDivElement>(null);
 
   async function submit(event: React.FormEvent) {
     event.preventDefault();
@@ -19,6 +20,7 @@ export default function Login() {
 
   return (
     <div className={styles.register}>
+      <div className={styles.effect} ref={effect}></div>
       <form onSubmit={submit}>
         <h1>Login</h1>
         <CustomInput
