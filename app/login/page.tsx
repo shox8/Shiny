@@ -5,6 +5,7 @@ import { useLoginMutation } from "@/redux/services/auth";
 import CustomInput from "@/components/Input";
 import { useRouter } from "next/navigation";
 import styles from "../../styles/auth.module.scss";
+import { cursor } from "@/utils/cursor";
 
 export default function Login() {
   const [user, setUser] = useState<User | any>();
@@ -17,6 +18,8 @@ export default function Login() {
     await loginUser(user).unwrap();
     route.push("/");
   }
+
+  cursor(effect);
 
   return (
     <div className={styles.register}>

@@ -1,6 +1,6 @@
 .register {
     height: 100dvh;
-    background-color: #22223b;
+    background-color: #0b090a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,14 +10,20 @@
         max-height: 300px;
         max-width: 300px;
         border-radius: 50%;
-        background: linear-gradient(#f2e9e4ab, #ffa69ebe);
-        animation: effect 1s infinite linear;
+        background: linear-gradient(#ff3d3d 50%, #9a8478 50%);
+        animation: effect 1.5s infinite linear;
         position: absolute;
         top: 30%;
         left: 30%;
         filter: blur(80px);
         transform: translate(-50%, -50%);
         transition: .1s;
+
+        @keyframes effect {
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
     }
 
     form {
@@ -26,7 +32,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        background-color: #16151881;
+        background-color: #1414149d;
         border-radius: 20px;
         padding: 20px;
         z-index: 1;
