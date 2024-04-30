@@ -77,14 +77,19 @@
     }
 }
 
-@media screen and (max-width :700px) {
+@media screen and (max-width :600px) {
     .register {
         align-items: end;
 
         form {
             min-width: 300px;
-            // margin-bottom: 10px;
-            // background-color: transparent;
+            padding-bottom: 30px;
+            background-color: transparent;
+
+            button,
+            .submitBtn {
+                background-color: #2727279d;
+            }
         }
     }
 }
