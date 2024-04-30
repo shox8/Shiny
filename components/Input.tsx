@@ -47,7 +47,7 @@ export default function CustomInput({
           <button
             type="button"
             onClick={() => setOpen(!open)}
-            className="h-[40px] w-[15%] rounded-[10px] bg-black flex justify-center items-center"
+            className="h-[40px] w-[15%] rounded-[10px] bg-black flex justify-center items-center active:bg-[#0c0c0c] active:scale-[0.95]"
           >
             {open ? <HiMiniEye /> : <RiEyeCloseFill />}
           </button>

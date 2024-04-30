@@ -48,6 +48,12 @@
             margin-top: 25px;
             height: 45px;
             background-color: #000000;
+            transition: .1s;
+
+            &:active {
+                background-color: #0c0c0c;
+                transform: scale(0.95);
+            }
         }
 
         h1 {
@@ -61,9 +67,14 @@
         }
 
         input {
-            background-color: #4d4a52;
+            background-color: #343236;
             padding-left: 10px;
             height: 40px;
+            transition: .5s;
+
+            &:focus {
+                background-color: #4c4a50;
+            }
         }
 
         kbd {
