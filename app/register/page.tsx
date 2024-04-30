@@ -5,6 +5,7 @@ import { useRegisterMutation } from "@/redux/services/auth";
 import { useRouter } from "next/navigation";
 import CustomInput from "@/components/Input";
 import styles from "../../styles/auth.module.scss";
+import { cursor } from "@/utils/cursor";
 import Link from "next/link";
 
 export default function Register() {
@@ -19,18 +20,7 @@ export default function Register() {
     route.push("/");
   }
 
-  document.addEventListener("mousemove", (e: MouseEvent) => {
-    const { x, y } = e;
-    const w = x < innerWidth / 2 ? x : innerWidth - x;
-    const h = y < innerHeight / 2 ? y : innerHeight - y;
-
-    if (effect.current) {
-      effect.current.style.top = `${y}px`;
-      effect.current.style.left = `${x}px`;
-      effect.current.style.width = `${Math.min(w, h)}px`;
-      effect.current.style.height = `${Math.min(w, h)}px`;
-    }
-  });
+  cursor(effect);
 
   return (
     <div className={styles.register}>
