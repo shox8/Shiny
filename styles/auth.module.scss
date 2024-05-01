@@ -49,10 +49,19 @@
             height: 45px;
             background-color: #000000;
             transition: .1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
 
             &:active {
                 background-color: #0c0c0c;
                 transform: scale(0.95);
+            }
+
+            &:disabled {
+                background-color: #0c0c0c;
+                color: #b9b9b9;
             }
         }
 
