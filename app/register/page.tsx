@@ -8,6 +8,7 @@ import styles from "../../styles/auth.module.scss";
 import { cursor } from "@/utils/cursor";
 import Link from "next/link";
 import Loader from "@/components/Loader";
+import Image from "next/image";
 
 export default function Register() {
   const [user, setUser] = useState<User | any>();
@@ -31,6 +32,13 @@ export default function Register() {
   return (
     <div className={styles.register}>
       <div className={styles.effect} ref={effect}></div>
+      <Image
+        src="/vercel.svg"
+        className={styles.logo}
+        width={100}
+        height={100}
+        alt="Picture of the author"
+      />
       <form onSubmit={submit}>
         <h1>Register</h1>
         <CustomInput label="Name" name="name" set={setUser} required />

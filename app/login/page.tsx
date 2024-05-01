@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import styles from "../../styles/auth.module.scss";
 import { cursor } from "@/utils/cursor";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Login() {
   const [user, setUser] = useState<User | any>();
@@ -24,6 +25,13 @@ export default function Login() {
 
   return (
     <div className={styles.register}>
+      <Image
+        src="/vercel.svg"
+        className={styles.logo}
+        width={100}
+        height={100}
+        alt="Picture of the author"
+      />
       <div className={styles.effect} ref={effect}></div>
       <form onSubmit={submit}>
         <h1>Login</h1>
