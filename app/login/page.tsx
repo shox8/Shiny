@@ -26,7 +26,7 @@ export default function Login() {
   return (
     <div className={styles.register}>
       <Image
-        src="/vercel.svg"
+        src="/login.png"
         className={styles.logo}
         width={100}
         height={100}

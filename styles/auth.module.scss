@@ -1,23 +1,21 @@
 .register {
     min-height: 100dvh;
-    background-color: #0b090a;
+    background-color: #1d1d1f;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 
-    .logo {
-        // width: 200px;
+    .image {
         display: none;
-        position: absolute;
-        top: 10%;
+        margin: 30px;
     }
 
     .effect {
         max-height: 300px;
         max-width: 300px;
         border-radius: 50%;
-        background: linear-gradient(#ff3d3d 50%, #9a8478 50%);
+        background: linear-gradient(#fdce72 50%, #9a8478 50%);
         animation: effect 1.5s infinite linear;
         position: absolute;
         top: 30%;
@@ -39,9 +37,10 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        background-color: #1414149d;
+        background-color: #313133c0;
         border-radius: 20px;
         padding: 20px;
+        z-index: 1;
 
         button,
         input {
@@ -82,7 +81,7 @@
         }
 
         input {
-            background-color: #343236;
+            background-color: #57565a;
             padding-left: 10px;
             height: 40px;
             transition: .5s;
@@ -108,8 +107,7 @@
         justify-content: end;
         flex-direction: column;
 
-        .logo {
-            width: 200px;
+        .image {
             display: block;
         }
 
@@ -131,7 +129,7 @@
                 transform: translateY(-100%);
                 height: 60px;
                 width: 60px;
-                background-color: #1414149d;
+                background-color: #313133c0;
             }
 
             &::after {
@@ -143,12 +141,7 @@
                 height: 60px;
                 width: 60px;
                 border-bottom-left-radius: 100%;
-                background-color: #0b090a;
-            }
-
-            button,
-            .submitBtn {
-                background-color: #2727279d;
+                background-color: #1d1d1f;
             }
         }
     }
