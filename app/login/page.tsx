@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { User } from "@/app/types";
 import { useLoginMutation } from "@/redux/services/auth";
 import CustomInput from "@/components/Input";
@@ -11,9 +11,15 @@ import Image from "next/image";
 
 export default function Login() {
   const [user, setUser] = useState<User | any>();
+  const [size, setSize] = useState<number>(0);
   const [loginUser] = useLoginMutation();
   const route = useRouter();
   const effect = useRef<HTMLDivElement>(null);
+  const form = useRef<HTMLFormElement | any>(null);
+
+  useEffect(() => {
+    setSize(form.current ? innerHeight - form.current?.offsetHeight - 60 : 0);
+  }, [form.current]);
 
   async function submit(event: React.FormEvent) {
     event.preventDefault();
@@ -27,13 +33,13 @@ export default function Login() {
     <div className={styles.register}>
       <Image
         src="/login.png"
-        className={styles.logo}
-        width={100}
-        height={100}
+        className={styles.image}
+        width={size}
+        height={size}
         alt="Picture of the author"
       />
       <div className={styles.effect} ref={effect}></div>
-      <form onSubmit={submit}>
+      <form onSubmit={submit} ref={form}>
         <h1>Login</h1>
         <CustomInput
           type="email"

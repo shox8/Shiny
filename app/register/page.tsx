@@ -12,7 +12,7 @@ import Image from "next/image";
 
 export default function Register() {
   const [user, setUser] = useState<User | any>();
-  const [size, setSize] = useState<number>(100);
+  const [size, setSize] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [registerUser, data] = useRegisterMutation();
   const route = useRouter();
@@ -39,7 +39,7 @@ export default function Register() {
     <div className={styles.register}>
       <div className={styles.effect} ref={effect}></div>
       <Image
-        src="/login.png"
+        src="/register.png"
         className={styles.image}
         width={size}
         height={size}
