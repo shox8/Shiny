@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import Image from "next/image";
 import styles from "../styles/navbar.module.scss";
 import ui from "../styles/ui.module.scss";
-import { token, title } from "@/app/base";
+import { title } from "@/app/base";
 import { CgPentagonUp } from "react-icons/cg";
 import Link from "next/link";
 
@@ -12,9 +12,7 @@ const settings = {
 };
 
 export default function Navbar() {
-  function leave() {
-    localStorage.removeItem(token);
-  }
+  function leave() {}
 
   return (
     <div className={styles.navbar}>
