@@ -1,6 +1,6 @@
 "use client";
 import { User } from "@/app/types";
-import React, { Dispatch, SetStateAction, useRef, useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import { RiEyeCloseFill } from "react-icons/ri";
 import { HiMiniEye } from "react-icons/hi2";
 
@@ -47,7 +47,7 @@ export default function CustomInput({
           <button
             type="button"
             onClick={() => setOpen(!open)}
-            className="h-[40px] w-[15%] rounded-[10px] bg-black flex justify-center items-center active:bg-[#0c0c0c] active:scale-[0.95]"
+            className="h-[40px] w-[15%] rounded-[10px] bg-[#76ABAE] flex justify-center items-center active:bg-[#638e91] active:scale-[0.95] text-black"
           >
             {open ? <HiMiniEye /> : <RiEyeCloseFill />}
           </button>

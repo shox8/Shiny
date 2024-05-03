@@ -8,14 +8,20 @@ import styles from "../../styles/auth.module.scss";
 import { cursor } from "@/utils/cursor";
 import Link from "next/link";
 import Image from "next/image";
+import Loader from "@/components/Loader";
 
 export default function Login() {
   const [user, setUser] = useState<User | any>();
   const [size, setSize] = useState<number>(0);
-  const [loginUser] = useLoginMutation();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [loginUser, data] = useLoginMutation();
   const route = useRouter();
   const effect = useRef<HTMLDivElement>(null);
   const form = useRef<HTMLFormElement | any>(null);
+
+  useEffect(() => {
+    setIsLoading(data.status === "pending" ? true : false);
+  }, [data]);
 
   useEffect(() => {
     setSize(form.current ? innerHeight - form.current?.offsetHeight - 60 : 0);
@@ -40,7 +46,7 @@ export default function Login() {
       />
       <div className={styles.effect} ref={effect}></div>
       <form onSubmit={submit} ref={form}>
-        <h1>Login</h1>
+        <h1>Log in</h1>
         <CustomInput
           type="email"
           label="Email"
@@ -58,7 +64,9 @@ export default function Login() {
         <kbd>
           Create an accaunt. <Link href={"/register"}>Register</Link>
         </kbd>
-        <button className={styles.submitBtn}>Submit</button>
+        <button className={styles.submitBtn} disabled={isLoading}>
+          <Loader active={isLoading} /> Submit
+        </button>
       </form>
     </div>
   );

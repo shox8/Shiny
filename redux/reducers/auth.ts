@@ -1,13 +1,14 @@
 import { User } from "@/app/types";
 import { createSlice } from "@reduxjs/toolkit";
-import { login, register } from "../services/auth";
-import { key } from "@/app/base";
+import { login, member, register } from "../services/auth";
+import { token, userId } from "@/app/base";
 
 interface State {
   user: User;
+  member: User;
 }
 
-const initialState: State = { user: {} };
+const initialState: State = { user: {}, member: {} };
 
 type UserAuthData = User & { token: string };
 
@@ -16,7 +17,8 @@ const equal = (
   action: { payload: UserAuthData }
 ) => {
   state.user = action.payload;
-  localStorage.setItem(key, action.payload.token);
+  localStorage.setItem(token, action.payload.token);
+  localStorage.setItem(userId, action.payload.id);
 };
 
 const auth = createSlice({
@@ -28,8 +30,12 @@ const auth = createSlice({
   extraReducers: (builder) => {
     builder
       .addMatcher(register.matchFulfilled, equal)
-      .addMatcher(login.matchFulfilled, equal);
+      .addMatcher(login.matchFulfilled, equal)
+      .addMatcher(member.matchFulfilled, (state, action) => {
+        state.user = action.payload;
+      });
   },
 });
 
+export const { logout } = auth.actions;
 export default auth.reducer;

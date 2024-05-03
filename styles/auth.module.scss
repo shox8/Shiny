@@ -1,6 +1,6 @@
 .register {
     min-height: 100dvh;
-    background-color: #1d1d1f;
+    background-color: #13161b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        background-color: #313133c0;
+        background-color: #31363fbd;
         border-radius: 20px;
         padding: 20px;
         z-index: 1;
@@ -81,13 +81,17 @@
         }
 
         input {
-            background-color: #57565a;
+            background-color: #13161b;
             padding-left: 10px;
             height: 40px;
             transition: .5s;
 
             &:focus {
-                background-color: #4c4a50;
+                background-color: #7e7c81;
+
+                &::placeholder {
+                    color: #2b2b2b;
+                }
             }
         }
 
@@ -96,7 +100,7 @@
             text-align: center;
 
             a {
-                color: #3a7dd4;
+                color: #58aeff;
             }
         }
     }

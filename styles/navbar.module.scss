@@ -1,0 +1,24 @@
+.navbar {
+    height: 80px;
+    width: 100%;
+    background-color: #31363fbd;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+
+    .combines {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        h1 {
+            font-size: 23px;
+            font-weight: bold;
+            background: -webkit-linear-gradient(45deg, #ffffff, #476888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}

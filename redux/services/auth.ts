@@ -19,10 +19,17 @@ export const authApi = api.injectEndpoints({
         body: data,
       }),
     }),
+    member: builder.query<ResponseData, string>({
+      query: (id) => ({
+        url: `/member/${id}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useRegisterMutation, useLoginMutation } = authApi;
+export const { useRegisterMutation, useLoginMutation, useMemberQuery } =
+  authApi;
 export const {
-  endpoints: { register, login },
+  endpoints: { register, login, member },
 } = authApi;

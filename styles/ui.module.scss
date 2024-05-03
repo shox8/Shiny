@@ -8,3 +8,64 @@
         }
     }
 }
+
+.searchInput {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #13161b;
+    padding-left: 10px;
+    height: 40px;
+    transition: .5s;
+    width: 250px;
+    color: #fff;
+    
+    &:focus {
+        background-color: #7e7c81;
+
+        &::placeholder {
+            color: #2b2b2b;
+        }
+    }
+}
+
+.iconBtn {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 40px;
+    background-color: #76ABAE;
+    transition: .1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-size: 30px;
+
+    &:active {
+        background-color: #638e91;
+        transform: scale(0.95);
+    }
+}
+
+.btn {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    background-color: #000000;
+    transition: .1s;
+    color: #ffffff;
+    padding-inline: 15px;
+
+    &:active {
+        background-color: #0c0c0c;
+        transform: scale(0.95);
+    }
+
+    &:disabled {
+        background-color: #0c0c0c;
+        color: #b9b9b9;
+    }
+}

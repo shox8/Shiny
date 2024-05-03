@@ -1,0 +1,13 @@
+.layout {
+    min-height: 100dvh;
+    background-color: #13161b;
+    padding: 10px;
+
+    .line {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
