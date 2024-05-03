@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "../styles/navbar.module.scss";
 import ui from "../styles/ui.module.scss";
-import { key, title } from "@/app/base";
+import { token, title } from "@/app/base";
 import { CgPentagonUp } from "react-icons/cg";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ const settings = {
 
 export default function Navbar() {
   function leave() {
-    localStorage.removeItem(key);
+    localStorage.removeItem(token);
   }
 
   return (
