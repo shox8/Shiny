@@ -7,7 +7,7 @@ import { userId } from "./base";
 import { useMemberQuery } from "@/redux/services/auth";
 
 export default function Home() {
-  const {} = useMemberQuery(localStorage.getItem(userId) || "");
+  const {} = useMemberQuery(localStorage?.getItem(userId) || "");
 
   return (
     <div className={styles.layout}>
