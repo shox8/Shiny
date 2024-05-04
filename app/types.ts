@@ -5,6 +5,9 @@ export type User = {
   email?: string;
   password?: string | any;
   bio?: string;
-  photo?: string;
+  photo?: string | any;
   token?: string;
+  followers?: any[];
+  follows?: any[];
+  posts?: any[];
 };

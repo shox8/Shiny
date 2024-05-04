@@ -2,8 +2,9 @@
 import { userId } from "./base";
 import { useMemberQuery } from "@/redux/services/auth";
 import styles from "../styles/layout.module.scss";
-import Profile from "@/components/ProfileBlog";
+import ProfileBlog from "@/components/ProfileBlog";
 import Navbar from "@/components/Navbar";
+import Creator from "@/components/Creator";
 
 export default function Home() {
   const {} = useMemberQuery(userId);
@@ -12,7 +13,8 @@ export default function Home() {
     <div className={styles.layout}>
       <Navbar />
       <div className={styles.line}>
-        <Profile />
+        <ProfileBlog />
+        <Creator />
       </div>
     </div>
   );
