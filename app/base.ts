@@ -1,7 +1,9 @@
 import { Nunito } from "next/font/google";
 
-export const token = "token";
+export const token: string = "token";
 
-export const userId = "userId";
+export const userIdKey: string = "userId";
+
+export const userId: any = localStorage.getItem(userIdKey);
 
 export const title = Nunito({ subsets: ["latin"] });

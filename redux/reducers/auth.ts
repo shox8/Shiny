@@ -1,7 +1,7 @@
 import { User } from "@/app/types";
 import { createSlice } from "@reduxjs/toolkit";
 import { login, member, register } from "../services/auth";
-import { token, userId } from "@/app/base";
+import { token, userIdKey } from "@/app/base";
 
 interface State {
   user: User;
@@ -18,7 +18,7 @@ const equal = (
 ) => {
   state.user = action.payload;
   localStorage.setItem(token, action.payload.token);
-  localStorage.setItem(userId, action.payload.id);
+  localStorage.setItem(userIdKey, action.payload.id);
 };
 
 const auth = createSlice({
