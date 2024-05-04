@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import styles from "../styles/layout.module.scss";
 import Profile from "@/components/ProfileBlog";
 import Navbar from "@/components/Navbar";
@@ -7,9 +6,7 @@ import { userId } from "./base";
 import { useMemberQuery } from "@/redux/services/auth";
 
 export default function Home() {
-  const id = localStorage.getItem('userId') || "";
-
-const {} = useMemberQuery(id);
+  const {} = useMemberQuery(localStorage.getItem(userId) || "");
 
   return (
     <div className={styles.layout}>
