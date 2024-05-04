@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   useEffect(() => {
-    const {} = useMemberQuery(userId);
+    const {} = useMemberQuery(userId || "");
   }, []);
 
   return (
