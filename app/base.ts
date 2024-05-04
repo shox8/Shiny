@@ -4,6 +4,7 @@ export const token: string = "token";
 
 export const userIdKey: string = "userId";
 
-export const userId: any = localStorage.getItem(userIdKey);
+export const userId: any =
+  typeof window !== "undefined" ? localStorage.getItem(userIdKey) : "";
 
 export const title = Nunito({ subsets: ["latin"] });
