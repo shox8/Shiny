@@ -47,12 +47,19 @@ export default function Register() {
       />
       <form onSubmit={submit} ref={form}>
         <h1>Register</h1>
-        <CustomInput label="Name" name="name" set={setUser} required />
+        <CustomInput
+          label="Name"
+          name="name"
+          set={setUser}
+          value={user.name}
+          required
+        />
         <CustomInput
           type="email"
           label="Email"
           name="email"
           set={setUser}
+          value={user.email}
           required
         />
         <CustomInput
@@ -60,6 +67,7 @@ export default function Register() {
           name="password"
           set={setUser}
           eye={true}
+          value={user.password}
           required
         />
         <kbd>

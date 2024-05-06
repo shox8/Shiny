@@ -52,14 +52,16 @@ export default function Login() {
           label="Email"
           name="email"
           set={setUser}
+          value={user.email}
           required
         />
         <CustomInput
           label="Password"
           name="password"
           set={setUser}
-          required
           eye={true}
+          value={user.password}
+          required
         />
         <kbd>
           Create an accaunt. <Link href={"/register"}>Register</Link>

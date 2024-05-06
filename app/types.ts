@@ -11,3 +11,9 @@ export type User = {
   follows?: any[];
   posts?: any[];
 };
+
+export type Post = {
+  id?: string;
+  title: string;
+  images: string[];
+};

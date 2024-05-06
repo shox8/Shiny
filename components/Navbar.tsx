@@ -25,7 +25,7 @@ export default function Navbar() {
         />
         <h1 className={title.className}>{settings.webName}</h1>
       </Link>
-      <input className={ui.searchInput} placeholder="Search" />
+      <input className={`${ui.input} w-[250px]`} placeholder="Search" />
       <div className={styles.combines}>
         <button className={ui.iconBtn}>
           <CgPentagonUp />
